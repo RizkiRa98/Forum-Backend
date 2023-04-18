@@ -1,0 +1,53 @@
+//Create User
+POST http://localhost:3000/users
+
+Content-Type: application/json
+
+{
+  "username": "rzkrmdhn0198",
+  "name": "Muhamad Rizki Ramadhan",
+  "email": "rizkiramadhan350@gmail.com",
+  "password": "123456",
+  "confPassword": "123456",
+	"gender": "pria",
+  "roleId": "admin",
+	"foto": "asdkwkwandawk",
+}
+
+###
+GET http://localhost:3000/users
+
+### Get by ID
+GET http://localhost:3000/users/48aef839-1917-4690-a8b8-1c4ea75b5a32
+
+### Update Data
+PATCH http://localhost:3000/users/48aef839-1917-4690-a8b8-1c4ea75b5a32
+
+Content-Type: application/json
+
+{
+	"userName": "agng10283",
+	"name": "Agung Updated",
+	"email": "Agung@gmail.com",
+	"password": "",
+	"confPassword": "",
+	"roleId": "user",
+	"gender": "pria",
+	"foto": "asdkwkdmskakwds"
+}
+
+### Delete Data
+DELETE http://localhost:3000/users/48aef839-1917-4690-a8b8-1c4ea75b5a32
+
+## Login User
+POST http://localhost:3000/login
+
+Content-Type: application/json
+
+{
+  "email": "rizkiramadhan350@gmail.com",
+  "password": "123456",
+}
+
+## Get User Login
+GET http://localhost:3000/userLogin
